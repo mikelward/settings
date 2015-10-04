@@ -9,6 +9,7 @@ Chrome := LOCALAPPDATA . "Google\Chrome\Application\chrome.exe"
 #e::Run explorer
 #g::Run Chrome
 #i::Run C:\Program Files\iTunes\iTunes
+#m::Run C:\Windows\System32\cmd.exe /A /Q /K C:\msys64\msys2_shell.bat
 #n::Run notepad2
 #p::Run C:\Program Files\PuTTY\PuTTY
 
