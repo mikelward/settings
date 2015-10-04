@@ -7,10 +7,10 @@ Chrome := LOCALAPPDATA . "Google\Chrome\Application\chrome.exe"
 ;^w::Send ^{F4}
 
 #e::Run explorer
-#i::Run C:\Program Files\iTunes\iTunes
-#p::Run C:\Program Files\PuTTY\PuTTY
 #g::Run Chrome
+#i::Run C:\Program Files\iTunes\iTunes
 #n::Run notepad2
+#p::Run C:\Program Files\PuTTY\PuTTY
 
 #Up::Send {Volume_Up}
 ;#Up::SoundSetWaveVolume, +20
