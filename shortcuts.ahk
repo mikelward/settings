@@ -1,35 +1,16 @@
 SetTitleMatchMode, 2
 
-^q::Send !{F4}
-#^w::Send ^{F4}
-
-#w::Run C:\Program Files\Microsoft Office\Office12\Winword
-#e::Run explorer
-#t::Run C:\Program Files\Mozilla Thunderbird\Thunderbird
-#i::Run C:\Program Files\iTunes\iTunes
-;#o::Run C:\Program Files\Microsoft Office\Office12\Outlook
-#o::Run C:\Program Files\Opera\Opera
-#p::
-Run C:\Program Files\PuTTY\PuTTY @falcon
-WinWait, PuTTY
-WinMaximize
-return
-
-;#s::Run cmd
-#s::Run C:\Program Files\Safari\Safari
-#f::Run C:\Program Files\Mozilla Firefox\Firefox
-;#f::Run C:\program files\Mozilla Firefox 3 Beta 5\firefox
 EnvGet, LOCALAPPDATA, LOCALAPPDATA
 Chrome := LOCALAPPDATA . "Google\Chrome\Application\chrome.exe"
-#g::Run Chrome
 
-#z::Run C:\Cygwin\cygwin.bat
-#x::Run C:\Program Files\Microsoft Office\Office12\Excel
-#c::Run calc
-#v::Run C:\Program Files\Microsoft Visual Studio 2005\Common\Bin\MSDEV
-#b::Run C:\Cygwin\cygwin.bat
+^q::Send !{F4}
+;^w::Send ^{F4}
+
+#e::Run explorer
+#i::Run C:\Program Files\iTunes\iTunes
+#p::Run C:\Program Files\PuTTY\PuTTY
+#g::Run Chrome
 #n::Run notepad2
-#m::Run C:\Program Files\Microsoft Office\Office12\Outlook /select "outlook://Home/Search Folders/Unread"
 
 #Up::Send {Volume_Up}
 ;#Up::SoundSetWaveVolume, +20
@@ -53,12 +34,6 @@ Chrome := LOCALAPPDATA . "Google\Chrome\Application\chrome.exe"
 ;::Send {Launch_Mail}
 ;::Send {Launch_Media}
 ;::Send {Browser_Home}
-
-; Make Ctrl+PageUp and Ctrl+PageDown work in Safari
-#ifWinActive ahk_class {1C03B488-D53B-4a81-97F8-754559640193}
-^PgUp::Send ^+[
-#ifWinActive ahk_class {1C03B488-D53B-4a81-97F8-754559640193}
-^PgDn::Send ^+]
 
 ; Left-handed mouse (Windows keeps forgetting my settings)
 ;LButton::Send {RButton}
